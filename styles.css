@@ -1,115 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+/*Container for poster with margin and padding*/
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  background-color: #f2f2f3;
+  width: 70%;
+  box-shadow: 10px 10px 5px grey;
+
+  padding-top: 144px;
+  padding-bottom: 144px;
+
+  margin-bottom: 200px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Header for poster with margin and padding*/
+.intro {
+  color: antiquewhite;
+  background: #327798;
+  text-align: center;
+  height: 144px;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 150px;
+  font-family: "Roboto", sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: floralwhite;
+  padding-top: 15px;
+  text-decoration: underline overline;
+  box-shadow: 10px 10px 5px grey;
+}
+
+/*Grid with two rows and three columns*/
+.two{
+  display: grid;
+}
+.two__text {
+  grid-row: 1;
+  grid-column: span 3;
+  font-family: "Dancing Script", cursive;
+  color: #327798;
+  font-size: 80px;
   text-align: center;
 }
-.header {
-  height: 150px;
-  background-color: #f2f2f3;
+.two__img{
+  margin-top: 20px;
+  grid-row: 2;
+  grid-column: 2;
+}
+/* Fancy text with color animation */
+.three {
+  text-align: center;
+  font-size: 110px;
+  padding-top: 0px;
+  margin: 40px;
+  font-weight: bolder;
+  animation: animate infinite 5s;
+  color: #48abda;
+}
+/* Color animation */
+@keyframes animate {
+  0% {
+    color: #48abda;
+  }
+  25% {
+    color: #317494;
+  }
+  50% {
+    color: #204a5f;
+  }
+  75% {
+    color: #317494;
+  }
+  100% {
+    color: #48abda;
+  }
+}
+
+/*Text using display and logo with animation*/
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
-.header__navigation {
-  overflow: hidden;
-}
-.header__logo__container{
-  width: 100%;
-  display: flex;
-}
-
-.header__navigation a {
-  float: left;
-  color: #050505;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.header__navigation a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.header__navigation a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-.header__logo {
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer{
-  background-color: #3D90CD;
-  height: 200px;
-  width: 100%;
-  clear: both;
-  text-align: center;
-  padding: 5px;
-}
-main {
-    display: block;
-    flex: 1 0 auto;
-}
-section{
-  height: 800px;
-  padding-top: 20px;
-}
-#home{
-  background-color: #3D90CD;
-  text-align: center;
-  padding-top: 300px;
-}
-#work{
-  list-style-type: circle;
-}
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-h2:hover {
-  background-color: #04AA6D;
-}
-#about{
-  display: flex;
-}
-.about__text{
+.footer__text {
   margin-left: 40px;
   margin-right: 40px;
+}
+.footer__text--callout{
+  display:block;
+}
+
+/* Logo animation */
+.logo {
+  transform: rotate(0deg);
+  transition-duration: 500ms;
+}
+.logo:hover {
+  transform: rotate(20deg);
+  transition-duration: 500ms;
 }
