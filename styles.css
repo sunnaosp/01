@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+/*Container for poster with margin and padding*/
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  background-color: #f2f2f3;
+  width: 70%;
+  box-shadow: 10px 10px 5px grey;
+
+  padding-top: 144px;
+  padding-bottom: 144px;
+
+  margin-bottom: 200px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Header for poster with margin and padding*/
+.intro {
+  color: antiquewhite;
+  background: #327798;
+  text-align: center;
+  height: 144px;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 150px;
+  font-family: "Roboto", sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: floralwhite;
+  padding-top: 15px;
+  text-decoration: underline overline;
+  box-shadow: 10px 10px 5px grey;
+}
+
+/*Grid with two rows and three columns*/
+.two{
+  display: grid;
+}
+.two__text {
+  grid-row: 1;
+  grid-column: span 3;
+  font-family: "Dancing Script", cursive;
+  color: #327798;
+  font-size: 80px;
+  text-align: center;
+}
+.two__img{
+  margin-top: 20px;
+  grid-row: 2;
+  grid-column: 2;
+}
+/* Fancy text with color animation */
+.three {
+  text-align: center;
+  font-size: 110px;
+  padding-top: 0px;
+  margin: 40px;
+  font-weight: bolder;
+  animation: animate infinite 5s;
+  color: #48abda;
+}
+/* Color animation */
+@keyframes animate {
+  0% {
+    color: #48abda;
+  }
+  25% {
+    color: #317494;
+  }
+  50% {
+    color: #204a5f;
+  }
+  75% {
+    color: #317494;
+  }
+  100% {
+    color: #48abda;
+  }
+}
+
+/*Text using display and logo with animation*/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.footer__text--callout{
+  display:block;
+}
+
+/* Logo animation */
+.logo {
+  transform: rotate(0deg);
+  transition-duration: 500ms;
+}
+.logo:hover {
+  transform: rotate(20deg);
+  transition-duration: 500ms;
+}
